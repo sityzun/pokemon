@@ -96,3 +96,45 @@ body:has(#page-battle.active){padding-bottom:0}
 .play-slot:has(.active-card-image){overflow:hidden;padding:3px;gap:2px}
 .play-slot .active-card-image{height:clamp(48px,9vh,88px);width:auto;max-width:100%;flex:0 1 auto}
 @media(max-width:680px){.real-card-art{border-radius:7px}.real-card-small{width:38px;flex-basis:38px}.hand-card:has(.hand-card-image){padding:1px}.play-slot .active-card-image{height:clamp(42px,8vh,64px)}}
+
+/* Fixed-ratio battle viewport: the complete arena scales as one game screen. */
+#page-battle.active{height:calc(100dvh - 78px);min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;}
+#page-battle>.content-wrap{box-sizing:border-box;flex:none;width:min(100%,calc((100dvh - 78px)*1.7777778));height:min(100%,calc((100vw)*.5625),calc(100dvh - 78px));aspect-ratio:16/9;max-width:none;max-height:100%;margin:0 auto;overflow:hidden;padding:clamp(6px,.8vw,14px);gap:clamp(4px,.55vw,9px);}
+#page-battle .battle-status{min-height:0;flex:0 0 8%;overflow:hidden;}
+#page-battle .battle-board{flex:1 1 0;min-height:0;overflow:hidden;}
+#page-battle .battle-controls{flex:0 0 35%;min-height:0;display:flex;flex-direction:column;overflow:hidden;}
+#page-battle .hand-head{flex:0 0 auto;}
+#page-battle .hand-cards{flex:1 1 auto;min-height:0;align-items:center;}
+#page-battle .hand-card{height:min(100%,clamp(62px,13vh,132px));aspect-ratio:5/7;width:auto;flex:0 1 auto;max-width:calc((100% - 28px)/6);}
+#page-battle .battle-action-row{flex:0 0 auto;}
+#page-battle .demo-note{flex:0 0 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+@media(max-width:680px){
+ #page-battle.active{height:calc(100dvh - 64px - 66px);}
+ #page-battle>.content-wrap{width:min(100vw,calc((100dvh - 130px)*1.7777778));height:min(calc(100vw*.5625),calc(100dvh - 130px));padding:4px;gap:3px;}
+ #page-battle .battle-status{flex-basis:9%;}
+ #page-battle .battle-controls{flex-basis:34%;}
+ #page-battle .hand-card{height:min(100%,10vh);max-width:calc((100% - 20px)/6);}
+ #page-battle .demo-note{display:none;}
+}
+@media(max-width:680px) and (orientation:portrait){
+ /* Keep the exact game ratio in portrait too; use compact controls rather than page scrolling. */
+ #page-battle .battle-status p{display:none;}
+ #page-battle .battle-round{width:28px;height:28px;}
+ #page-battle .battle-round span{display:none;}
+ #page-battle .battle-board{padding:2px 4px;}
+ #page-battle .player-label{gap:3px;}
+ #page-battle .player-label small{display:none;}
+ #page-battle .play-slot{width:clamp(38px,10vw,60px);padding:2px;}
+ #page-battle .slot-mon{font-size:clamp(10px,2vw,16px);margin:1px 0;}
+ #page-battle .play-slot .active-card-image{height:40%;}
+ #page-battle .bench-slots{gap:2px;}
+ #page-battle .empty-slot{width:clamp(14px,4vw,24px);height:clamp(20px,5vw,30px);}
+ #page-battle .empty-slot small{display:none;}
+ #page-battle .deck-pile small{font-size:5px;}
+ #page-battle .card-back{width:14px;height:20px;}
+ #page-battle .hand-head .muted{display:none;}
+ #page-battle .hand-card{height:clamp(28px,7vw,46px);padding:1px;}
+ #page-battle .hand-card b,#page-battle .hand-card small,#page-battle .hand-card span{display:none;}
+ #page-battle .hand-card .hand-emoji{font-size:12px;}
+ #page-battle .battle-action-row .btn{padding:3px 2px;font-size:6px;}
+}
