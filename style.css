@@ -5,3 +5,80 @@
 @media(max-width:1000px){.topbar{gap:16px;padding:0 22px}.desktop-nav{gap:0}.nav-link{padding:11px}.profile-btn{font-size:0}.profile-btn span{font-size:15px;margin:0}.hero{padding-left:6vw}.hero-art{right:-6%;width:52%}.hero h1{font-size:43px}.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.deck-layout{grid-template-columns:minmax(0,1fr) 260px;gap:15px}.content-wrap{padding-left:22px;padding-right:22px}}
 @media(max-width:680px){body{padding-bottom:68px}.topbar{height:64px;padding:0 16px;gap:12px}.brand{font-size:17px}.brand small{font-size:7px;letter-spacing:1.5px}.brand .ball{width:26px;height:26px}.desktop-nav,.profile-btn{display:none}.menu-btn{display:block;margin-left:auto}.hero{min-height:680px;align-items:flex-start;padding:43px 23px 40px}.hero-copy{max-width:100%}.hero h1{font-size:39px;letter-spacing:-1.5px;margin:19px 0 12px}.hero-copy>p{font-size:12px}.hero-actions{margin-top:21px;gap:8px}.hero-actions .btn{font-size:11px;padding:12px 13px}.hero-stats{gap:22px;margin-top:27px}.hero-stats strong{font-size:19px}.hero-stats div>span{font-size:9px}.hero-art{top:310px;right:0;width:100%;height:340px;transform:scale(.88)}.hero-bottom-label{bottom:13px;left:23px;right:23px;font-size:7px;gap:8px}.content-wrap{padding:37px 16px 45px}.section-heading h2{font-size:21px}.section-heading p{font-size:10px;line-height:1.7}.section-index{font-size:8px}.feature-grid{grid-template-columns:1fr;gap:12px}.feature-card{min-height:230px;display:grid;grid-template-columns:38% 1fr;grid-template-rows:1fr}.feature-art{height:100%;min-height:230px;grid-row:1;grid-column:1}.feature-copy{padding:35px 15px 15px 5px;grid-column:2;grid-row:1;align-self:center}.feature-copy h3{font-size:16px}.feature-copy p{font-size:10px}.feature-icon{top:12px;left:12px;width:30px;height:30px;font-size:14px}.feature-link{margin-top:13px}.mini-cards span{width:47px;height:67px;font-size:25px}.deck-art:before,.deck-art:after{width:63px;height:94px}.deck-art span{font-size:24px}.versus-art:before,.versus-art:after{width:56px;height:74px;font-size:29px}.versus-art span{font-size:20px}.lower-heading{margin-top:40px}.workspace-grid{grid-template-columns:1fr;gap:10px}.workspace-card{padding:15px;gap:11px}.notice{padding:15px;align-items:flex-start}.notice-tag{display:none}.notice b{font-size:11px}.footer{padding:20px 16px;flex-wrap:wrap;gap:10px}.footer-brand{width:100%}.footer>span{font-size:7px}.mobile-nav{position:fixed;z-index:30;bottom:0;left:0;right:0;height:66px;display:flex;justify-content:space-around;align-items:center;background:#07162bf2;border-top:1px solid #213958;backdrop-filter:blur(15px);padding-bottom:env(safe-area-inset-bottom)}.mobile-nav button{flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:none;border:0;color:#7188a8;font-size:9px}.mobile-nav button span{font-size:19px}.mobile-nav button.active{color:#70c5ff}.mobile-nav button.active span{filter:drop-shadow(0 0 5px #218fff)}.page-banner{min-height:180px;padding:35px 22px}.page-banner h1{font-size:30px}.page-banner p{max-width:80%;font-size:11px}.banner-orb{right:4%;top:36px;font-size:76px}.toolbar{flex-wrap:wrap;gap:8px}.searchbox{flex-basis:100%;height:42px}.toolbar select{flex:1;max-width:none;height:40px;font-size:10px}.filter-chips{gap:6px;margin:15px 0}.chip{font-size:10px;padding:7px 9px}.library-summary{font-size:9px;gap:8px}.library-summary span:last-child{max-width:52%;text-align:right}.card-grid{grid-template-columns:1fr;gap:10px}.library-card{padding:10px;gap:12px}.sample-card-art{width:94px;min-width:94px;height:133px}.sample-card-art .art-emoji{font-size:42px}.library-card-info h3{font-size:13px}.card-move-name{margin-top:10px}.add-card-panel{padding:17px;align-items:flex-start;flex-direction:column}.add-card-panel h3{font-size:16px}.add-card-panel p{line-height:1.8}.add-card-panel .btn{width:100%}.deck-layout{grid-template-columns:1fr;gap:20px}.deck-name-row{align-items:center}.deck-name-input{font-size:17px;width:53vw}.deck-name-row .btn{font-size:10px;padding:11px 12px}.deck-side{display:grid;grid-template-columns:1fr}.deck-donut{width:130px;height:130px}.deck-tabs{gap:18px}.deck-tabs button{font-size:10px}.battle-status h2{font-size:17px}.battle-status p{max-width:280px}.battle-round{width:53px;height:53px;flex-shrink:0}.battle-round strong{font-size:20px}.battle-board{padding:10px}.play-slots{gap:7px}.play-slot{width:95px;min-height:130px;padding:8px 4px}.slot-mon{font-size:31px}.play-slot b{font-size:9px}.play-slot small{font-size:7px}.bench-slots{gap:4px}.empty-slot{width:43px;height:69px;font-size:15px}.empty-slot small{font-size:7px}.card-back{width:35px;height:50px}.deck-pile{gap:5px}.player-label b{font-size:10px}.player-label small{font-size:8px}.avatar{width:29px;height:29px;font-size:8px}.board-divider{gap:7px}.board-divider small{font-size:7px}.hand-head h3{font-size:14px}.hand-cards{gap:7px}.hand-card{min-width:88px;width:88px;height:128px}.hand-card .hand-emoji{font-size:33px}.battle-action-row{gap:6px}.battle-action-row .btn{font-size:10px;padding:10px 11px}.demo-note{font-size:8px}.modal{padding:23px 18px}.modal h2{font-size:21px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Battle arena: fit the entire match UI inside the visible viewport. */
+html:has(#page-battle.active), body:has(#page-battle.active){height:100%;overflow:hidden;overscroll-behavior:none}
+body:has(#page-battle.active){padding-bottom:0}
+#page-battle.active{height:calc(100dvh - 78px);min-height:0;overflow:hidden;display:flex;flex-direction:column;animation:none}
+#page-battle .page-banner{display:none}
+#page-battle>.content-wrap{width:100%;max-width:1500px;flex:1;min-height:0;overflow:hidden;padding:clamp(8px,1.4vh,18px) clamp(12px,2vw,30px);display:flex;flex-direction:column;gap:clamp(6px,1vh,12px)}
+#page-battle .battle-status{flex:0 0 auto;margin:0;min-height:48px;align-items:center}
+#page-battle .battle-status h2{font-size:clamp(14px,1.5vw,20px);margin:4px 0}
+#page-battle .battle-status p{font-size:clamp(8px,.75vw,10px);line-height:1.4}
+#page-battle .battle-round{width:clamp(42px,5vh,58px);height:clamp(42px,5vh,58px);flex-shrink:0}
+#page-battle .battle-round strong{font-size:clamp(17px,2.4vh,24px)}
+#page-battle .battle-board{flex:1 1 auto;min-height:0;padding:clamp(5px,1vh,12px) clamp(8px,1.5vw,20px);display:flex;flex-direction:column;justify-content:space-evenly}
+#page-battle .player-zone{padding:clamp(3px,.7vh,8px) 0;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
+#page-battle .player-label{flex:0 0 auto;gap:8px}
+#page-battle .avatar{width:clamp(24px,3.5vh,34px);height:clamp(24px,3.5vh,34px)}
+#page-battle .play-slots{flex:1;min-height:0;padding:clamp(3px,.7vh,9px) 0;gap:clamp(5px,1.5vw,18px)}
+#page-battle .play-slot{width:clamp(78px,11vw,130px);min-height:0;height:100%;max-height:clamp(92px,17vh,150px);padding:clamp(4px,.8vh,12px) 5px;justify-content:center}
+#page-battle .slot-mon{font-size:clamp(22px,4.5vh,38px);margin:clamp(2px,.6vh,8px) 0}
+#page-battle .bench-slots{gap:clamp(3px,.6vw,7px)}
+#page-battle .empty-slot{width:clamp(34px,5.7vw,68px);height:clamp(45px,10vh,85px)}
+#page-battle .card-back{width:clamp(28px,3.5vw,48px);height:clamp(39px,8vh,66px)}
+#page-battle .board-divider{flex:0 0 auto;margin:0;gap:8px}
+#page-battle .board-divider small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:55%}
+#page-battle .battle-controls{flex:0 0 auto;min-height:0}
+#page-battle .hand-head{margin:0 0 4px;align-items:center}
+#page-battle .hand-head h3{font-size:clamp(12px,1.2vw,16px);margin:3px 0 0}
+#page-battle .hand-cards{overflow:hidden;padding:3px 2px 5px;gap:clamp(4px,.7vw,10px);justify-content:center}
+#page-battle .hand-card{width:clamp(58px,8vw,100px);min-width:0;height:clamp(76px,15vh,142px);padding:4px;border-width:1px}
+#page-battle .hand-card .hand-emoji{font-size:clamp(20px,4vh,39px)}
+#page-battle .hand-card b{font-size:clamp(7px,.75vw,10px)}
+#page-battle .hand-card small,#page-battle .hand-card span{font-size:clamp(6px,.6vw,8px)}
+#page-battle .battle-action-row{margin-top:4px;gap:6px}
+#page-battle .battle-action-row .btn{padding:clamp(6px,.9vh,11px) clamp(8px,1vw,15px);font-size:clamp(9px,.8vw,11px)}
+#page-battle .demo-note{font-size:clamp(7px,.65vw,9px);line-height:1.3;margin:4px 0 0}
+@media(max-width:680px){
+ #page-battle.active{height:calc(100dvh - 64px - 66px)}
+ #page-battle>.content-wrap{padding:6px 8px;gap:5px}
+ #page-battle .battle-status{min-height:38px}
+ #page-battle .battle-status p{max-width:none;font-size:7px}
+ #page-battle .battle-round{width:36px;height:36px}
+ #page-battle .battle-round span{font-size:6px}
+ #page-battle .battle-round strong{font-size:15px}
+ #page-battle .battle-board{padding:4px 7px;border-radius:10px}
+ #page-battle .player-label{gap:5px}
+ #page-battle .player-label b{font-size:8px}
+ #page-battle .player-label small{font-size:7px}
+ #page-battle .prize-count{font-size:7px}
+ #page-battle .prize-count b{font-size:11px;margin-left:3px}
+ #page-battle .play-slot{width:clamp(63px,18vw,95px);max-height:clamp(76px,14vh,120px)}
+ #page-battle .play-slot>span{font-size:6px}
+ #page-battle .play-slot b{font-size:8px}
+ #page-battle .play-slot small{font-size:6px}
+ #page-battle .empty-slot{width:clamp(25px,8.5vw,43px);height:clamp(34px,8vh,60px);font-size:13px}
+ #page-battle .empty-slot small{font-size:6px}
+ #page-battle .deck-pile{gap:3px}
+ #page-battle .deck-pile small{font-size:6px}
+ #page-battle .card-back{width:25px;height:35px;font-size:14px}
+ #page-battle .hand-head .eyebrow{font-size:7px;letter-spacing:1px}
+ #page-battle .hand-head h3{font-size:11px}
+ #page-battle .hand-head>.muted{font-size:7px}
+ #page-battle .hand-cards{justify-content:flex-start;overflow:hidden}
+ #page-battle .hand-card{width:clamp(48px,14vw,76px);height:clamp(65px,12vh,94px);flex:1 1 0;max-width:76px;min-width:0}
+ #page-battle .hand-card .hand-emoji{font-size:clamp(18px,3vh,27px)}
+ #page-battle .battle-action-row{display:grid;grid-template-columns:1fr 1fr  .8fr;gap:4px}
+ #page-battle .battle-action-row .btn{padding:8px 3px;font-size:8px;white-space:nowrap}
+ #page-battle .demo-note{font-size:6px}
+}
+@media(max-height:600px){
+ #page-battle>.content-wrap{gap:4px;padding-top:4px;padding-bottom:4px}
+ #page-battle .battle-status{min-height:32px}
+ #page-battle .battle-board{padding-top:2px;padding-bottom:2px}
+ #page-battle .play-slot{max-height:12vh}
+ #page-battle .hand-card{height:10vh}
+ #page-battle .hand-head{margin-bottom:2px}
+ #page-battle .demo-note{display:none}
+}
