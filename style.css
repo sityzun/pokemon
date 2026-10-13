@@ -303,3 +303,6 @@ body:has(#page-battle.active){padding-bottom:0}
 #page-battle .demo-note { flex:0 0 auto; font-size:1.1cqh; line-height:1.2; margin:.4cqh 0 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 @media(max-width:680px) { #page-battle.active { height:calc(100dvh - 64px - 66px); } #page-battle .battle-status p,#page-battle .demo-note { display:none; } #page-battle .battle-status h2 { font-size:2.5cqh; } #page-battle .player-label small { display:none; } }
 @media(max-height:520px) { #page-battle .battle-status p,#page-battle .demo-note { display:none; } }
+
+/* PWA install control */
+.install-btn{border:1px solid #3386ff;background:#12345b;color:#fff;padding:10px 12px;border-radius:10px;font-size:12px;white-space:nowrap}.install-btn[hidden]{display:none!important}@media(max-width:900px){.install-btn{padding:8px 9px;font-size:11px}}@media(max-width:680px){.topbar{gap:10px}.install-btn{margin-left:auto}.profile-btn{display:none}}
