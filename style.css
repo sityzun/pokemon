@@ -138,3 +138,168 @@ body:has(#page-battle.active){padding-bottom:0}
  #page-battle .hand-card .hand-emoji{font-size:12px;}
  #page-battle .battle-action-row .btn{padding:3px 2px;font-size:6px;}
 }
+
+/* Stable battle canvas: all battle dimensions are relative to one 16:9 container.
+   Phase 1 intentionally preserves landscape game proportions on every device. */
+#page-battle.active {
+  height: calc(100dvh - 78px);
+  min-height: 0;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #040d1c;
+}
+#page-battle > .content-wrap {
+  container-type: size;
+  box-sizing: border-box;
+  flex: none;
+  width: min(100vw, calc((100dvh - 78px) * 16 / 9));
+  height: min(calc(100vw * 9 / 16), calc(100dvh - 78px));
+  aspect-ratio: 16 / 9;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 1.2cqh 1.4cqw;
+  gap: .8cqh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#page-battle .battle-status {
+  flex: 0 0 8%;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  align-items: center;
+}
+#page-battle .battle-status > div:first-child { min-width: 0; overflow: hidden; }
+#page-battle .status-pill { font-size: 1.1cqh; padding: .4cqh .7cqw; }
+#page-battle .battle-status h2 { font-size: 2.1cqh; line-height: 1.2; margin: .4cqh 0; white-space: nowrap; }
+#page-battle .battle-status p { font-size: 1.1cqh; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#page-battle .battle-round { width: 7cqh; height: 7cqh; border-radius: 1cqh; flex: 0 0 auto; }
+#page-battle .battle-round span { font-size: 1cqh; letter-spacing: .15cqw; }
+#page-battle .battle-round strong { font-size: 2.7cqh; }
+#page-battle .battle-board {
+  flex: 1 1 0;
+  min-height: 0;
+  padding: 1cqh 1.2cqw;
+  border-radius: 1.2cqh;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 0;
+  overflow: hidden;
+}
+#page-battle .player-zone { flex: 1 1 0; min-height: 0; padding: .4cqh 0; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+#page-battle .player-label { flex: 0 0 auto; gap: .8cqw; min-height: 0; }
+#page-battle .avatar { width: 4.3cqh; height: 4.3cqh; font-size: 1.1cqh; }
+#page-battle .player-label b { font-size: 1.4cqh; }
+#page-battle .player-label small { font-size: 1.1cqh; }
+#page-battle .prize-count { font-size: 1.1cqh; }
+#page-battle .prize-count b { font-size: 1.8cqh; }
+#page-battle .play-slots { flex: 1 1 0; min-height: 0; padding: .6cqh 0; gap: 1.2cqw; align-items: center; }
+#page-battle .play-slot { width: 10cqw; height: 100%; min-height: 0; max-height: 100%; padding: .6cqh .4cqw; border-radius: .8cqh; gap: .3cqh; justify-content: center; }
+#page-battle .play-slot > span { font-size: 1cqh; }
+#page-battle .slot-mon { font-size: 4.5cqh; margin: .4cqh 0; }
+#page-battle .play-slot b { font-size: 1.4cqh; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#page-battle .play-slot small { font-size: 1.1cqh; margin-top: .2cqh; }
+#page-battle .hp-bar { height: .5cqh; margin-top: .3cqh; }
+#page-battle .play-slot .active-card-image { height: 11cqh; width: auto; max-width: 90%; object-fit: contain; }
+#page-battle .bench-slots { gap: .6cqw; align-items: center; }
+#page-battle .empty-slot { width: 5.5cqw; height: 10cqh; border-radius: .7cqh; font-size: 2.2cqh; }
+#page-battle .empty-slot small { font-size: 1cqh; margin-top: .4cqh; }
+#page-battle .deck-pile { gap: .5cqh; }
+#page-battle .card-back { width: 5cqw; height: 8.5cqh; border-width: .2cqw; border-radius: .6cqh; font-size: 2.4cqh; }
+#page-battle .deck-pile small { font-size: 1cqh; white-space: nowrap; }
+#page-battle .board-divider { flex: 0 0 8%; min-height: 0; margin: 0; gap: .8cqw; overflow: hidden; }
+#page-battle .board-divider > span { font-size: 1.5cqh; }
+#page-battle .board-divider small { font-size: 1.1cqh; max-width: 65%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#page-battle .battle-controls { flex: 0 0 34%; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+#page-battle .hand-head { flex: 0 0 auto; margin: 0 0 .5cqh; align-items: center; }
+#page-battle .hand-head .eyebrow { font-size: 1.1cqh; letter-spacing: .15cqw; }
+#page-battle .hand-head h3 { font-size: 1.8cqh; margin: .3cqh 0 0; }
+#page-battle .hand-head > .muted { font-size: 1.1cqh; }
+#page-battle .hand-cards { flex: 1 1 0; min-height: 0; display: flex; align-items: center; justify-content: center; gap: .7cqw; padding: .4cqh 0; overflow: hidden; }
+#page-battle .hand-card { box-sizing: border-box; flex: 0 1 auto; width: auto; min-width: 0; max-width: 13%; height: 100%; aspect-ratio: 5 / 7; padding: .3cqh; border-width: .15cqw; border-radius: .7cqh; overflow: hidden; }
+#page-battle .hand-card .hand-emoji { font-size: 3.2cqh; }
+#page-battle .hand-card b { font-size: 1.2cqh; line-height: 1.2; }
+#page-battle .hand-card small, #page-battle .hand-card span { font-size: 1cqh; line-height: 1.15; }
+#page-battle .hand-card:has(.hand-card-image) { padding: .2cqh; }
+#page-battle .battle-action-row { flex: 0 0 auto; display: flex; flex-wrap: nowrap; gap: .6cqw; margin-top: .4cqh; }
+#page-battle .battle-action-row .btn { min-width: 0; padding: .8cqh 1cqw; font-size: 1.2cqh; white-space: nowrap; border-radius: .7cqh; }
+#page-battle .demo-note { flex: 0 0 auto; font-size: 1cqh; line-height: 1.2; margin: .4cqh 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 680px) {
+  #page-battle.active { height: calc(100dvh - 64px - 66px); }
+  #page-battle > .content-wrap { width: min(100vw, calc((100dvh - 130px) * 16 / 9)); height: min(calc(100vw * 9 / 16), calc(100dvh - 130px)); padding: 1cqh 1cqw; gap: .6cqh; }
+  #page-battle .battle-status p { display: none; }
+  #page-battle .battle-status { flex-basis: 8%; }
+  #page-battle .battle-controls { flex-basis: 34%; }
+  #page-battle .battle-status h2 { font-size: 2cqh; }
+  #page-battle .battle-round { width: 6cqh; height: 6cqh; }
+  #page-battle .battle-board { padding: .6cqh .7cqw; }
+  #page-battle .player-label { gap: .5cqw; }
+  #page-battle .player-label small { display: none; }
+  #page-battle .play-slot { width: 10cqw; padding: .3cqh .2cqw; }
+  #page-battle .empty-slot { width: 5cqw; height: 9cqh; }
+  #page-battle .card-back { width: 4.5cqw; height: 7.5cqh; }
+  #page-battle .hand-card { max-width: 13%; }
+  #page-battle .demo-note { display: none; }
+}
+@media (max-height: 520px) {
+  #page-battle .battle-status p { display: none; }
+  #page-battle .demo-note { display: none; }
+}
+
+
+/* Qiita approach: design one 16:9 battle canvas, then scale it uniformly to fit. */
+#page-battle.active { height:calc(100dvh - 78px); min-height:0; padding:0; overflow:hidden; display:flex; align-items:center; justify-content:center; animation:none; }
+#page-battle .page-banner { display:none; }
+#page-battle .battle-viewport { position:relative; width:100%; height:100%; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+#page-battle .battle-canvas { position:absolute; left:50%; top:50%; width:1280px; height:720px; transform:translate(-50%,-50%) scale(var(--battle-scale,.5)); transform-origin:center center; overflow:hidden; container-type:size; display:flex; flex-direction:column; gap:1.1cqh; padding:1.2cqh 1.4cqw; background:radial-gradient(ellipse at 50% 50%,#0c2340 0%,#07162c 72%); border:1px solid #203c60; border-radius:1.2cqh; }
+#page-battle .battle-status { flex:0 0 8%; min-height:0; margin:0; overflow:hidden; }
+#page-battle .battle-status h2 { font-size:2.6cqh; margin:.6cqh 0; }
+#page-battle .battle-status p { font-size:1.35cqh; line-height:1.35; }
+#page-battle .battle-round { width:7cqh; height:7cqh; }
+#page-battle .battle-round span { font-size:1.1cqh; }
+#page-battle .battle-round strong { font-size:3.4cqh; }
+#page-battle .battle-board { flex:1 1 0; min-height:0; padding:1cqh 1.4cqw; display:flex; flex-direction:column; justify-content:space-evenly; overflow:hidden; }
+#page-battle .player-zone { flex:1 1 0; min-height:0; padding:.5cqh 0; display:flex; flex-direction:column; justify-content:center; }
+#page-battle .player-label { flex:0 0 auto; gap:.8cqw; }
+#page-battle .avatar { width:4.5cqh; height:4.5cqh; font-size:1.2cqh; }
+#page-battle .player-label b { font-size:1.6cqh; }
+#page-battle .player-label small,#page-battle .prize-count { font-size:1.2cqh; }
+#page-battle .prize-count b { font-size:1.8cqh; }
+#page-battle .play-slots { flex:1 1 0; min-height:0; padding:.7cqh 0; gap:1.4cqw; }
+#page-battle .play-slot { width:10cqw; max-width:130px; height:90%; max-height:17cqh; min-height:0; padding:.7cqh .5cqw; justify-content:center; }
+#page-battle .play-slot>span { font-size:1.1cqh; }
+#page-battle .slot-mon { font-size:5cqh; margin:.8cqh 0; }
+#page-battle .play-slot b { font-size:1.6cqh; }
+#page-battle .play-slot small { font-size:1.2cqh; }
+#page-battle .bench-slots { gap:.6cqw; }
+#page-battle .empty-slot { width:5.4cqw; height:10cqh; font-size:2.4cqh; }
+#page-battle .empty-slot small { font-size:1.1cqh; }
+#page-battle .deck-pile { gap:.6cqh; }
+#page-battle .card-back { width:5cqw; height:8.5cqh; font-size:2.6cqh; }
+#page-battle .deck-pile small { font-size:1.2cqh; }
+#page-battle .board-divider { flex:0 0 7%; min-height:0; margin:0; gap:.8cqw; }
+#page-battle .board-divider>span { font-size:1.8cqh; }
+#page-battle .board-divider small { font-size:1.2cqh; max-width:65%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#page-battle .battle-controls { flex:0 0 34%; min-height:0; display:flex; flex-direction:column; overflow:hidden; }
+#page-battle .hand-head { flex:0 0 auto; margin:0 0 .5cqh; align-items:center; }
+#page-battle .hand-head .eyebrow { font-size:1.2cqh; letter-spacing:.15cqw; }
+#page-battle .hand-head h3 { font-size:2cqh; margin:.3cqh 0 0; }
+#page-battle .hand-head>.muted { font-size:1.2cqh; }
+#page-battle .hand-cards { flex:1 1 0; min-height:0; align-items:center; justify-content:center; gap:.7cqw; padding:.4cqh 0; overflow:hidden; }
+#page-battle .hand-card { box-sizing:border-box; flex:0 1 auto; width:auto; min-width:0; max-width:13%; height:100%; aspect-ratio:5/7; padding:.4cqh; border-width:.15cqw; border-radius:.7cqh; overflow:hidden; }
+#page-battle .hand-card .hand-emoji { font-size:4cqh; }
+#page-battle .hand-card b { font-size:1.4cqh; line-height:1.2; }
+#page-battle .hand-card small,#page-battle .hand-card span { font-size:1.1cqh; line-height:1.15; }
+#page-battle .hand-card:has(.hand-card-image) { padding:.2cqh; }
+#page-battle .battle-action-row { flex:0 0 auto; display:flex; flex-wrap:nowrap; gap:.7cqw; margin-top:.4cqh; }
+#page-battle .battle-action-row .btn { min-width:0; padding:.9cqh 1.2cqw; font-size:1.4cqh; white-space:nowrap; border-radius:.7cqh; }
+#page-battle .demo-note { flex:0 0 auto; font-size:1.1cqh; line-height:1.2; margin:.4cqh 0 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+@media(max-width:680px) { #page-battle.active { height:calc(100dvh - 64px - 66px); } #page-battle .battle-status p,#page-battle .demo-note { display:none; } #page-battle .battle-status h2 { font-size:2.5cqh; } #page-battle .player-label small { display:none; } }
+@media(max-height:520px) { #page-battle .battle-status p,#page-battle .demo-note { display:none; } }
